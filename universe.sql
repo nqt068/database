@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS moon
 );
 
 INSERT INTO galaxy
-    (galaxy_name, galaxy_type, num_of_stars, galaxy_group)
+    (name, galaxy_type, num_of_stars, galaxy_group)
 VALUES('Milky Way', 'barred-spiral', 5000, 'Local Group'),
     ('Canis Major Dwarf', 'dwarf-irregular', 5000, 'Local Group'),
     ('Virgo Stellar Stream', 'dwarf-spheroid', 3000, 'Local Group' ),
@@ -58,7 +58,7 @@ VALUES('Milky Way', 'barred-spiral', 5000, 'Local Group'),
 SELECT * FROM galaxy;
 
 INSERT INTO quasar
-    (quasar_name, quasar_type, galaxy_id)
+    (name, quasar_type, galaxy_id)
 VALUES('Example 1', 'Radio-loud', 3),
     ('Example 2', 'Radio-quiet', 6),
     ('Example 3', 'Red', 5);
@@ -73,7 +73,7 @@ VALUES('Sol', 'Yellow Dwarf', 8, 1),
     ('Wolf 359', 'Red Dwarf', 2, 1);
 
 INSERT INTO planet
-    (planet_name, moons, rings, star_id)
+    (name, moons, rings, star_id)
 VALUES('Mercury', 0, FALSE, 1),
     ('Venus', 0, FALSE, 1),
     ('Earth', 1, FALSE, 1),
@@ -88,7 +88,7 @@ VALUES('Mercury', 0, FALSE, 1),
     ('Barnards Star b', NULL, FALSE, 3);
 
 INSERT INTO moon
-    (moon_name, sole_moon, year_discovered, planet_id)
+    (name, sole_moon, year_discovered, planet_id)
 VALUES('Moon', TRUE, 1610, 3),
     ('Phobos', FALSE, 1877, 4),
     ('Deimos', FALSE, 1877, 4),
